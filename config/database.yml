@@ -13,13 +13,10 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-#
+#postgres://nzvlcuaniitive:9a0c4decc85455f5f31a76e2d24d7a21690325b011d67a096174be9cf713e5a4@ec2-54-83-0-158.compute-1.amazonaws.com:5432/d309gi3mhat2m9
 default: &default
   adapter: postgresql
-  host: 127.0.0.1
-  user: postgres
-  port: 5432
-  password: velit@123
+  host: <%= ENV["DATABASE_URL"] %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
